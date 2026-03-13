@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "981508067331",
+    "project_id": "sip-trunking-twilio",
+    "storage_bucket": "sip-trunking-twilio.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981508067331:android:2a5a454a142e356e887e36",
+        "android_client_info": {
+          "package_name": "com.example.sip_trunking_twilio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy2P5ZwMj_ayy01Il25JtgIO1xs2S4hIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981508067331:android:488076405342c705887e36",
+        "android_client_info": {
+          "package_name": "com.example.twilio_app_to_app_calling"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy2P5ZwMj_ayy01Il25JtgIO1xs2S4hIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981508067331:android:0c42a0f52431ceea887e36",
+        "android_client_info": {
+          "package_name": "com.example.twilio_sip"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy2P5ZwMj_ayy01Il25JtgIO1xs2S4hIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

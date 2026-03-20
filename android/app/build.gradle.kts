@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.twilio_app_to_app_calling"
+    namespace = "org.baps.mysatsang.uat"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -22,7 +22,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.twilio_app_to_app_calling"
+        applicationId = "org.baps.mysatsang.uat"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

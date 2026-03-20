@@ -13,6 +13,17 @@ class TwilioVoiceService {
 
   TwilioVoiceService._internal();
 
+  /// Request notification permissions (for iOS/Android as needed)
+  Future<bool> requestPermission() async {
+    try {
+      final bool? result = await _channel.invokeMethod('requestPermission');
+      return result ?? false;
+    } on PlatformException catch (e) {
+      print("Failed to request permission: '${e.message}'.");
+      return false;
+    }
+  }
+
   /// Pass the backend-generated access token to the native SDK
   Future<void> registerToken(String token) async {
     try {

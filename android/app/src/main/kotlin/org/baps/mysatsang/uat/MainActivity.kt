@@ -1,4 +1,4 @@
-package com.example.twilio_app_to_app_calling
+package org.baps.mysatsang.uat
 
 import android.Manifest
 import android.content.*
@@ -138,6 +138,10 @@ class MainActivity : FlutterActivity() {
                     val isSpeakerOn = call.argument<Boolean>("isSpeakerOn") ?: false
                     toggleSpeaker(isSpeakerOn)
                     result.success(null)
+                }
+                "requestPermission" -> {
+                    checkPermissions()
+                    result.success(true)
                 }
                 else -> result.notImplemented()
             }

@@ -17,6 +17,13 @@ const VoiceGrant = AccessToken.VoiceGrant;
 // Used by the Flutter app to get a capability token for the client
 app.get('/token', (req, res) => {
   const identity = req.query.identity || 'agent_001';
+  const platform = req.query.platform || 'ios'; // android or ios
+  let pushCredentialSid = process.env.IOS_PUSH_CREDENTIAL_SID;
+
+  if (platform === 'android') {
+    pushCredentialSid = process.env.ANDROID_PUSH_CREDENTIAL_SID;
+  }
+  console.debug('pushCredentialSid', pushCredentialSid)
 
   const token = new AccessToken(
     process.env.TWILIO_ACCOUNT_SID,
@@ -27,8 +34,8 @@ app.get('/token', (req, res) => {
 
   const grant = new VoiceGrant({
     outgoingApplicationSid: process.env.TWILIO_TWIML_APP_SID,
-    pushCredentialSid: process.env.PUSH_CREDENTIAL_SID, // Added for push notifications
-    incomingAllow: true, // Allow incoming calls to this identity
+    pushCredentialSid: pushCredentialSid,
+    incomingAllow: true,
   });
 
   token.addGrant(grant);
@@ -37,7 +44,7 @@ app.get('/token', (req, res) => {
     identity: identity,
     token: token.toJwt(),
   });
-  console.log(`Token generated for identity: ${identity}`);
+  console.log(`Token generated for identity: ${identity} (${platform})`);
 });
 
 // --- Make Call Endpoint ---

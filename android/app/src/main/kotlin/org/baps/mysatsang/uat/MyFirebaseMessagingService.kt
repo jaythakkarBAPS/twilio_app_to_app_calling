@@ -1,4 +1,4 @@
-package com.example.twilio_app_to_app_calling
+package org.baps.mysatsang.uat
 
 import android.content.Context
 import android.content.Intent

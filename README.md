@@ -1,17 +1,44 @@
-# twilio_app_to_app_calling
+# Twilio Calling: App-to-App & App-to-PSTN
 
-A new Flutter project.
+A comprehensive Flutter application demonstrating Twilio Voice integration for seamless communication.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **App-to-App Calling**: Call other users within the app using unique identities.
+- **App-to-Phone (PSTN)**: Dial normal mobile or landline numbers directly from the app.
+- **Phone-to-App**: Receive calls from any normal phone number directly in your Flutter app.
+- **Native Call UI**: Full integration with **iOS CallKit** and **Android Notifications** for a native calling experience.
+- **Background Support**: Receive calls even when the app is in the background or killed.
 
-A few resources to get you started if this is your first Flutter project:
+## Project Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `lib/`: Flutter code including the `TwilioVoiceService`.
+- `ios/`: Native Swift implementation using Twilio Voice SDK, PushKit, and CallKit.
+- `android/`: Native Kotlin implementation using Twilio Voice SDK and Firebase Cloud Messaging (FCM).
+- `twilio_server/`: Node.js server to handle token generation and TwiML routing.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# twilio_app_to_app_calling
+## Setup Instructions
+
+For a detailed, step-by-step guide on configuring Twilio, Firebase, and the backend, please refer to:
+
+👉 **[SETUP_GUIDE.md](./SETUP_GUIDE.md)**
+
+## Quick Start
+
+1. **Clone the repo.**
+2. **Setup the Backend**:
+   - Go to `twilio_server`, run `npm install`.
+   - Configure `.env` with your Twilio credentials.
+   - Start the server.
+3. **Configure Flutter**:
+   - Update your `google-services.json` (Android) and certificates (iOS).
+   - Run `flutter pub get`.
+4. **Run the app!**
+
+## Technologies Used
+
+- **Flutter**: Cross-platform UI.
+- **Twilio Voice SDK**: Real-time communication.
+- **Node.js**: Token and TwiML backend.
+- **Firebase/FCM**: Android push notifications.
+- **PushKit/CallKit**: iOS native call experience.
